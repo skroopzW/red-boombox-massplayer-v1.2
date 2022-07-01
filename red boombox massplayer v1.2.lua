@@ -164,6 +164,14 @@ Title.TextScaled = true
 Title.TextSize = 14.000
 Title.TextWrapped = true
 
+--Sync Gui--
+
+for _,syncgui in pairs(game.CoreGui:GetDescendants()) do
+	if syncgui:IsA("ScreenGui") and syncgui.Name == "Sync Button" then
+		syncgui:Destroy()
+	end
+end
+
 local lp = game.Players.LocalPlayer
 local char = lp.Character
 
